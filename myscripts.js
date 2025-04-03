@@ -14,6 +14,7 @@ addDoc } from 'https://www.gstatic.com/firebasejs/11.4.0/firebase-firestore.js'
 
 
 // Your web app's Firebase configuration
+const firebaseConfig = {
     apiKey: "AIzaSyA065c8czE8dwdjZmer-pfN104xMAkfrr8",
     authDomain: "assignment-4a14e.firebaseapp.com",
     projectId: "assignment-4a14e",
