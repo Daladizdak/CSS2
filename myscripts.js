@@ -15,12 +15,12 @@ addDoc } from 'https://www.gstatic.com/firebasejs/11.4.0/firebase-firestore.js'
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyA065c8czE8dwdjZmer-pfN104xMAkfrr8",
-    authDomain: "assignment-4a14e.firebaseapp.com",
-    projectId: "assignment-4a14e",
-    storageBucket: "assignment-4a14e.firebasestorage.app",
-    messagingSenderId: "346473966556",
-    appId: "1:346473966556:web:33d5ade95f8e1325ab7d19"
+  apiKey: "AIzaSyA065c8czE8dwdjZmer-pfN104xMAkfrr8",
+  authDomain: "assignment-4a14e.firebaseapp.com",
+  projectId: "assignment-4a14e",
+  storageBucket: "assignment-4a14e.firebasestorage.app",
+  messagingSenderId: "346473966556",
+  appId: "1:346473966556:web:33d5ade95f8e1325ab7d19"
 };
 
 
@@ -48,9 +48,9 @@ $('#reviewList').empty();
 var tableRows = '';
 snapshot.forEach((doc) => {
 tableRows += '<tr>';
-tableRows += '<td>' + doc.data().move_name + '</td>';
-tableRows += '<td>' + doc.data().move_director + '</td>';
-tableRows += '<td>' + doc.data().move_release + '</td>';
+tableRows += '<td>' + doc.data().movie_name + '</td>';
+tableRows += '<td>' + doc.data().movie_director + '</td>';
+tableRows += '<td>' + doc.data().movie_release + '</td>';
 tableRows += '<td>' + doc.data().movie_rating + '/5</td>';
 tableRows += '</tr>';
 });
