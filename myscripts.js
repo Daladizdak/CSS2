@@ -66,6 +66,11 @@ movie_director: $("#movieDirector").val(),
 movie_release: $("#movieRelease").val(),
 movie_rating: parseInt($("#movieRating").val())
 });
+
+// To make sure all the fields are filled
+var MovieName = document.getElementById(movieName).required:
+
+
 // Reset form
 $("#movieName").val('');
 $("#movieDirector").val('');
