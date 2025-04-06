@@ -48,8 +48,10 @@ $('#reviewList').empty();
 var tableRows = '';
 snapshot.forEach((doc) => {
 tableRows += '<tr>';
-tableRows += '<td>' + doc.data().book_name + '</td>';
-tableRows += '<td>' + doc.data().book_rating + '/5</td>';
+tableRows += '<td>' + doc.data().move_name + '</td>';
+tableRows += '<td>' + doc.data().move_director + '</td>';
+tableRows += '<td>' + doc.data().move_release + '</td>';
+tableRows += '<td>' + doc.data().movie_rating + '/5</td>';
 tableRows += '</tr>';
 });
 $('#reviewList').append(tableRows);
