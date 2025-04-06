@@ -35,7 +35,7 @@ const db = getFirestore(app);
 
 
 // Get a live data snapshot (i.e. auto-refresh) of our Reviews collection
-const q = query(collection(db, "Reviews"), orderBy("book_name"));
+const q = query(collection(db, "Movies"), orderBy("movie_name"));
 const unsubscribe = onSnapshot(q, (snapshot) => {
 
 
@@ -56,5 +56,5 @@ $('#reviewList').append(tableRows);
 
 
 // Display review count
-$('#mainTitle').html(snapshot.size + " book reviews in the list");
+$('#mainTitle').html(snapshot.size + " Movie reviews in the list");
 });
