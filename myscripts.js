@@ -57,6 +57,23 @@ tableRows += '</tr>';
 $('#reviewList').append(tableRows);
 
 
+// Add button pressed
+$("#addButton").click(function() {
+// Add review to Firestore collection
+const docRef = addDoc(collection(db, "Movies"), {
+movie_name: $("#movieName").val(),
+movie_director: $("#movieDirector").val(),
+movie_release: $("#movieRelease").val(),
+movie_rating: parseInt($("#movieRating").val())
+});
+// Reset form
+$("#movieName").val('');
+$("#movieDirector").val('');
+$("#movieRelease").val('');
+$("#movieRating").val('1');
+});
+
+
 // Display review count
 $('#mainTitle').html(snapshot.size + " Movie reviews in the list");
 });
