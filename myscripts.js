@@ -47,16 +47,24 @@ $('#reviewList').empty();
 // Loop through snapshot data and add to HTML table
 var tableRows = '';
 snapshot.forEach((doc) => {
-tableRows += '<tr>';
+tableRows += '<tr>'; 
 tableRows += '<td>' + doc.data().movie_name + '</td>';
 tableRows += '<td>' + doc.data().movie_director + '</td>';
 tableRows += '<td>' + doc.data().movie_release + '</td>';
 tableRows += '<td>' + doc.data().movie_rating + '/5</td>';
+tableRows += '<td><button class="btn btn-danger btn-sm" id="deleteBtn" data-id="${doc.id}">Delete</button></td>';  
 tableRows += '</tr>';
 });
 $('#reviewList').append(tableRows);
 
+//Delet button pressed
+$("#deleteButton").click(function() {
+    const docId = this.data('id');
+    await deleteDoc(doc(db, "Movies", "docId"));
+  
+}
 
+  
 // Add button pressed
 $("#addButton").click(function() {
 
