@@ -60,19 +60,21 @@ $('#reviewList').append(tableRows);
 // Add button pressed
 $("#addButton").click(function() {
 
-  // To make sure all the fields are filled
-if (!name || !director || !release || isNaN(rating)) {
-alert("Please fill out all fields before adding a movie.");
-return;
-}
+    // To make sure all the fields are filled
+    if (!name || !director || !release || !rating) {
+        alert("Please fill out all fields before adding a movie.");
+        return;
+    } else {
+        // Add review to Firestore collection
+        const docRef = addDoc(collection(db, "Movies"), {
+            movie_name: $("#movieName").val().trim(),
+            movie_director: $("#movieDirector").val().trim(),
+            movie_release: $("#movieRelease").val(),
+            movie_rating: parseInt($("#movieRating").val())
+        });
 
-// Add review to Firestore collection
-const docRef = addDoc(collection(db, "Movies"), {
-movie_name: $("#movieName").val().trim(),
-movie_director: $("#movieDirector").val().trim(),
-movie_release: $("#movieRelease").val(),
-movie_rating: parseInt($("#movieRating").val())
-});
+    } 
+
 
 
 
