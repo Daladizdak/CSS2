@@ -61,7 +61,7 @@ $('#reviewList').append(tableRows);
 $("#addButton").click(function() {
 
     // To make sure all the fields are filled
-    if (!name || !director || !release || !rating) {
+    if ($("#movieName").val() == "" || $("#movieDirector").val() == "" || $("#movieRelease").val() == "" || $("#movieRating").val() == "") {
         alert("Please fill out all fields before adding a movie.");
         return;
     } else {
