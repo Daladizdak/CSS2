@@ -68,7 +68,7 @@ movie_rating: parseInt($("#movieRating").val())
 });
 
 // To make sure all the fields are filled
-var MovieName = document.getElementById(movieName).required;
+var MovieName = document.getElementById("movieName").required;
 
 
 // Reset form
