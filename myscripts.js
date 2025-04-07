@@ -60,6 +60,11 @@ $('#reviewList').append(tableRows);
 // Add button pressed
 $("#addButton").click(function() {
 
+  // To make sure all the fields are filled
+if (!name || !director || !release || isNaN(rating)) {
+alert("Please fill out all fields before adding a movie.");
+return;
+}
 
 // Add review to Firestore collection
 const docRef = addDoc(collection(db, "Movies"), {
@@ -69,11 +74,7 @@ movie_release: $("#movieRelease").val(),
 movie_rating: parseInt($("#movieRating").val())
 });
 
-// To make sure all the fields are filled
-if (!name || !director || !release || isNaN(rating)) {
-alert("Please fill out all fields before adding a movie.");
-return;
-}
+
 
 
 // Reset form
