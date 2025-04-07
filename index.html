@@ -22,7 +22,15 @@ rel="stylesheet">
 
 <body>
 
-<div class="d-flex mb-2">
+<div class="container">
+<h1 id="mainTitle">Movies</h1>
+<table class="table table-striped">
+<tbody id="reviewList">
+</tbody>
+</table>
+</div>
+
+  <div class="d-flex mb-2">
 <input type="text" class="form-control" id="movieName" placeholder="Movie name">
 <input type="text" class="form-control" id="movieDirector" placeholder="Movie director">
 <input type="date" class="form-control" id="movieRelease" placeholder="yyyy-mm-dd">
@@ -35,15 +43,6 @@ rel="stylesheet">
 </select>
 <button type="button" class="btn btn-primary" id="addButton">Add</button>
 </div>
-
-<div class="container">
-<h1 id="mainTitle">Movies</h1>
-<table class="table table-striped">
-<tbody id="reviewList">
-</tbody>
-</table>
-</div>
-
 
 <!-- jQuery -->
 <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
