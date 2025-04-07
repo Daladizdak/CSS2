@@ -68,7 +68,10 @@ movie_rating: parseInt($("#movieRating").val())
 });
 
 // To make sure all the fields are filled
-var MovieName = document.getElementById("movieName").required;
+if (!name || !director || !release || !rating) {
+alert("Please fill out all fields before adding a movie.");
+return;
+}
 
 
 // Reset form
