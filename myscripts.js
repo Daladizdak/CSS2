@@ -59,16 +59,18 @@ $('#reviewList').append(tableRows);
 
 // Add button pressed
 $("#addButton").click(function() {
+
+
 // Add review to Firestore collection
 const docRef = addDoc(collection(db, "Movies"), {
-movie_name: $("#movieName").val(),
-movie_director: $("#movieDirector").val(),
+movie_name: $("#movieName").val().trim(),
+movie_director: $("#movieDirector").val().trim(),
 movie_release: $("#movieRelease").val(),
 movie_rating: parseInt($("#movieRating").val())
 });
 
 // To make sure all the fields are filled
-if (!name || !director || !release || !rating) {
+if (!name || !director || !release || isNaN(rating)) {
 alert("Please fill out all fields before adding a movie.");
 return;
 }
