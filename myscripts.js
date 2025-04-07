@@ -60,7 +60,7 @@ $('#reviewList').append(tableRows);
 //Delet button pressed
 $("#deleteButton").click(function() {
     const docId = this.data('id');
-    await deleteDoc(doc(db, "Movies", "docId"));
+    await deleteDoc(doc(db, "Movies", docId));
   
 }
 
