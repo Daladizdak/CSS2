@@ -55,7 +55,6 @@ tableRows += '<td>' + doc.data().movie_name + '</td>';
 tableRows += '<td>' + doc.data().movie_director + '</td>';
 tableRows += '<td>' + doc.data().movie_release + '</td>';
 tableRows += '<td>' + doc.data().movie_rating + '/5</td>';
-tableRows += `<td><button class="btn btn-success btn-sm addBtn">Add</button></td>`; 
 tableRows += `<td><button class="btn btn-warning btn-sm editBtn" data-id="${doc.id}">Edit</button></td>`; 
 tableRows += `<td><button class="btn btn-danger btn-sm deleteBtn" data-id="${doc.id}">Delete</button></td>`;  
 tableRows += '</tr>';
@@ -63,9 +62,7 @@ tableRows += '</tr>';
 $('#reviewList').append(tableRows);
 
  // Display review count
-$('#mainTitle').html(snapshot.size + " Movie reviews in the list");
-});
- 
+
 
 //Edit buttn pressed
 $(".editBtn").click( async function() {
@@ -104,11 +101,9 @@ $(".deleteBtn").click( async function() {
 
   
 // Add button pressed
-$(".addBtn").click(async function() {
-  $('#addModal').modal('show');
- });
-  
-  $("#addInBtn").click(async function() {
+// Add button pressed
+$("#addButton").click(function() {
+
     // To make sure all the fields are filled
     if ($("#movieName").val() == "" || $("#movieDirector").val() == "" || $("#movieRelease").val() == "" || $("#movieRating").val() == "") {
         alert("Please fill out all fields before adding a movie.");
@@ -120,9 +115,8 @@ $(".addBtn").click(async function() {
             movie_release: $("#movieRelease").val(),
             movie_rating: parseInt($("#movieRating").val())
         });
-    }
-      $('#addModal').modal('hide');
-    
+    } 
+  
 // Reset form
 $("#movieName").val('');
 $("#movieDirector").val('');
@@ -130,4 +124,6 @@ $("#movieRelease").val('');
 $("#movieRating").val('1');
 });
 
-
+$('#mainTitle').html(snapshot.size + " Movie reviews in the list");
+});
+ 
