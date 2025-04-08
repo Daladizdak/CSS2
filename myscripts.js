@@ -73,7 +73,6 @@ $("#addButton").click(function() {
     // To make sure all the fields are filled
     if ($("#movieName").val() == "" || $("#movieDirector").val() == "" || $("#movieRelease").val() == "" || $("#movieRating").val() == "") {
         alert("Please fill out all fields before adding a movie.");
-        return;
     } else {
         // Add review to Firestore collection
         const docRef = addDoc(collection(db, "Movies"), {
