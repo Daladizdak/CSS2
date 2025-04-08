@@ -62,7 +62,10 @@ tableRows += '</tr>';
 });
 $('#reviewList').append(tableRows);
 
-  
+ // Display review count
+$('#mainTitle').html(snapshot.size + " Movie reviews in the list");
+});
+ 
 
 //Edit buttn pressed
 $(".editBtn").click( async function() {
@@ -125,9 +128,6 @@ $("#movieName").val('');
 $("#movieDirector").val('');
 $("#movieRelease").val('');
 $("#movieRating").val('1');
-
-
-
-// Display review count
-$('#mainTitle').html(snapshot.size + " Movie reviews in the list");
 });
+
+
