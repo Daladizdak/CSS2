@@ -101,7 +101,7 @@ $(".deleteBtn").click( async function() {
 
   
 // Add button pressed
-$("#addBtn").click(async function() {
+$(".addBtn").click(async function() {
 
   $('#addModal').modal('show');
 
