@@ -9,6 +9,8 @@ onSnapshot,
 query,
 collection,
 orderBy,
+deleteDoc,
+doc,
 addDoc } from 'https://www.gstatic.com/firebasejs/11.4.0/firebase-firestore.js'
 
 
