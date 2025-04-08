@@ -30,42 +30,34 @@ rel="stylesheet">
 </table>
 </div>
 
-<div class = "container">
-<div class="d-flex mb-2">
-<input type="text" class="form-control" id="movieName" placeholder="Movie name">
-<input type="text" class="form-control" id="movieDirector" placeholder="Movie director">
-<input type="date" class="form-control" id="movieRelease" placeholder="yyyy-mm-dd">
-<select class="form-control mx-2 w-25" id="movieRating">
-<option value="1">1/5</option>
-<option value="2">2/5</option>
-<option value="3">3/5</option>
-<option value="4">4/5</option>
-<option value="5">5/5</option>
-</select>
-<button type="button" class="btn btn-primary" id="addButton">Add</button>
-</div>
-</div>  
-
+<!-- Edit Movie Modal -->
 <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
-<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-<div class="d-flex mb-2">
-<input type="text" class="form-control" id="editedName" placeholder="Movie name">
-<input type="text" class="form-control" id="editedDirector" placeholder="Movie director">
-<input type="date" class="form-control" id="editedRelease" placeholder="yyyy-mm-dd">
-<select class="form-control mx-2 w-25" id="editedRating">
-<option value="1">1/5</option>
-<option value="2">2/5</option>
-<option value="3">3/5</option>
-<option value="4">4/5</option>
-<option value="5">5/5</option>
-</select>
-<div class="modal-footer">
-<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-<button type="button" class="btn btn-primary" id="saveChangesBtn">Save changes</button>
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editModalLabel">Edit Movie</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <input type="text" class="form-control mb-2" id="editedName" placeholder="Movie name">
+        <input type="text" class="form-control mb-2" id="editedDirector" placeholder="Movie director">
+        <input type="date" class="form-control mb-2" id="editedRelease" placeholder="yyyy-mm-dd">
+        <select class="form-control mb-2" id="editedRating">
+          <option value="1">1/5</option>
+          <option value="2">2/5</option>
+          <option value="3">3/5</option>
+          <option value="4">4/5</option>
+          <option value="5">5/5</option>
+        </select>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="saveChangesBtn">Save changes</button>
+      </div>
+    </div>
+  </div>
 </div>
-</div>
-</div>
-</div>
+
 <!-- jQuery -->
 <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 
