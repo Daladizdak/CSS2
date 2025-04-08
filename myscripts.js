@@ -102,9 +102,9 @@ $(".deleteBtn").click( async function() {
   
 // Add button pressed
 $(".addBtn").click(async function() {
-
   $('#addModal').modal('show');
-
+ });
+  
   $("#addInBtn").click(async function() {
     // To make sure all the fields are filled
     if ($("#movieName").val() == "" || $("#movieDirector").val() == "" || $("#movieRelease").val() == "" || $("#movieRating").val() == "") {
@@ -117,21 +117,15 @@ $(".addBtn").click(async function() {
             movie_release: $("#movieRelease").val(),
             movie_rating: parseInt($("#movieRating").val())
         });
-      $('#addModal').modal('hide');
     }
-   });
-  });
-
-
-
-
-
+      $('#addModal').modal('hide');
+    
 // Reset form
 $("#movieName").val('');
 $("#movieDirector").val('');
 $("#movieRelease").val('');
 $("#movieRating").val('1');
-});
+
 
 
 // Display review count
