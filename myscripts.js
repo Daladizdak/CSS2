@@ -62,8 +62,31 @@ $('#reviewList').append(tableRows);
 
 //Edit buttn pressed
 $(".editBtn").click( async function() {
-    const Name = $(this).doc.data().movie_name;
-  $('#movieName').val(Name);  
+    const docId = $(this).data('id');
+    const row = $(this).closest("tr");
+  
+    const Movie = row.find('td').eq(0).text();
+    const Director = row.find('td').eq(1).text();
+  
+    $('#editedName').val(Movie);
+    $('#editedDirector').val(Director);
+
+    $('#editModal').modal('show');
+
+  $("#saveChangesBtn").click(async function() {
+    const updatedName = $("#editedName").val().trim();
+    const updatedDirector = $("#editedDirector").val().trim();
+    const updatedDate = $("#editedDate").val().trim();
+    const updatedRating = parseInt($("#editedRate").val());
+
+    await updateDoc(doc(db, "Movies", docId), {
+    movie_name: updatedName,
+    movie_director: updatedDirector,
+    movie_release: updatedDate,
+    movie_rating: updatedRate
+        });
+    $('#editModal').modal('hide');
+  });
 });
 
 //Delet button pressed
