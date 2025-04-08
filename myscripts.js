@@ -68,10 +68,10 @@ $(".editBtn").click( async function() {
 }
 
 //Delet button pressed
-$(".deleteBtn").click( async function() {
-    const docId = $(this).data('id');
-    await deleteDoc(doc(db, "Movies", docId));
-  });
+//$(".deleteBtn").click( async function() {
+   // const docId = $(this).data('id');
+    //await deleteDoc(doc(db, "Movies", docId));
+  //});
 
   
 // Add button pressed
