@@ -54,7 +54,7 @@ tableRows += '<td>' + doc.data().movie_name + '</td>';
 tableRows += '<td>' + doc.data().movie_director + '</td>';
 tableRows += '<td>' + doc.data().movie_release + '</td>';
 tableRows += '<td>' + doc.data().movie_rating + '/5</td>';
-tableRows += `<td><button class="btn btn-warning btn-sm editBtn" data-id="${doc.id}">Delete</button></td>`; 
+//tableRows += `<td><button class="btn btn-warning btn-sm editBtn" data-id="${doc.id}">Edit</button></td>`; 
 tableRows += `<td><button class="btn btn-danger btn-sm deleteBtn" data-id="${doc.id}">Delete</button></td>`;  
 tableRows += '</tr>';
 });
