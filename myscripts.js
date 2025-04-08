@@ -60,6 +60,8 @@ tableRows += '</tr>';
 });
 $('#reviewList').append(tableRows);
 
+  
+
 //Edit buttn pressed
 $(".editBtn").click( async function() {
     const docId = $(this).data('id');
@@ -76,8 +78,8 @@ $(".editBtn").click( async function() {
   $("#saveChangesBtn").click(async function() {
     const updatedName = $("#editedName").val().trim();
     const updatedDirector = $("#editedDirector").val().trim();
-    const updatedDate = $("#editedDate").val().trim();
-    const updatedRating = parseInt($("#editedRate").val());
+    const updatedDate = $("#editedRelease").val().trim();
+    const updatedRating = parseInt($("#editedRating").val());
 
     await updateDoc(doc(db, "Movies", docId), {
     movie_name: updatedName,
