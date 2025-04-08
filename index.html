@@ -46,6 +46,7 @@ rel="stylesheet">
 </div>
 </div>  
 
+<div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
 <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
 <input type="text" class="form-control" id="editedName" placeholder="Movie name">
 <input type="text" class="form-control" id="editedDirector" placeholder="Movie director">
@@ -57,6 +58,11 @@ rel="stylesheet">
 <option value="4">4/5</option>
 <option value="5">5/5</option>
 </select>
+<div class="modal-footer">
+<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+<button type="button" class="btn btn-primary" id="saveChangesBtn">Save changes</button>
+</div>
+</div>
 </div>
 <!-- jQuery -->
 <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
