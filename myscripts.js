@@ -60,7 +60,7 @@ tableRows += '</tr>';
 });
 $('#reviewList').append(tableRows);
 
-Edit buttn pressed
+//Edit buttn pressed
 $(".editBtn").click( async function() {
     const Name = $(this).doc.data().movie_name;
   $('#movieName').val(Name);  
