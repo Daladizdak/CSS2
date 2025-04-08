@@ -54,18 +54,18 @@ tableRows += '<td>' + doc.data().movie_name + '</td>';
 tableRows += '<td>' + doc.data().movie_director + '</td>';
 tableRows += '<td>' + doc.data().movie_release + '</td>';
 tableRows += '<td>' + doc.data().movie_rating + '/5</td>';
-//tableRows += `<td><button class="btn btn-warning btn-sm editBtn" data-id="${doc.id}">Edit</button></td>`; 
+tableRows += `<td><button class="btn btn-warning btn-sm editBtn" data-id="${doc.id}">Edit</button></td>`; 
 tableRows += `<td><button class="btn btn-danger btn-sm deleteBtn" data-id="${doc.id}">Delete</button></td>`;  
 tableRows += '</tr>';
 });
 $('#reviewList').append(tableRows);
 
-//Edit buttn pressed
-//$(".editBtn").click( async function() {
-    //const Name = $(this).doc.data().movie_name;
- // $('#movieName').val(Name);
+Edit buttn pressed
+$(".editBtn").click( async function() {
+    const Name = $(this).doc.data().movie_name;
+  $('#movieName').val(Name);
   
-//});
+});
 
 //Delet button pressed
 $(".deleteBtn").click( async function() {
