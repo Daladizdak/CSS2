@@ -86,7 +86,7 @@ $(".editBtn").click( async function() {
     movie_name: updatedName,
     movie_director: updatedDirector,
     movie_release: updatedDate,
-    movie_rating: updatedRate
+    movie_rating: updatedRating
         });
     $('#editModal').modal('hide');
   });
