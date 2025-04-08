@@ -10,6 +10,7 @@ query,
 collection,
 orderBy,
 deleteDoc,
+updateDoc,
 doc,
 addDoc } from 'https://www.gstatic.com/firebasejs/11.4.0/firebase-firestore.js'
 
