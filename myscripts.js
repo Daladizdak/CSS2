@@ -63,8 +63,7 @@ $('#reviewList').append(tableRows);
 Edit buttn pressed
 $(".editBtn").click( async function() {
     const Name = $(this).doc.data().movie_name;
-  $('#movieName').val(Name);
-  
+  $('#movieName').val(Name);  
 });
 
 //Delet button pressed
