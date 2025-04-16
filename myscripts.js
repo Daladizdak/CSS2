@@ -33,12 +33,17 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
+// Initially sorts the table with movie_name
+let currentSortField = "movie_name";
+let currentSortDirection = "asc";
 
-
-
+// Loads the movies with sorting
+function loadMovies(sortField = "movie_name", sortDirection = "asc") {
+currentSortField = sortField;
+currentSortDirection = sortDirection;
 
 // Get a live data snapshot (i.e. auto-refresh) of our Reviews collection
-const q = query(collection(db, "Movies"), orderBy("movie_name"));
+const q = query(collection(db, "Movies"), orderBy(sortField, sortDirection));
 const unsubscribe = onSnapshot(q, (snapshot) => {
 
 
@@ -101,7 +106,6 @@ $(".deleteBtn").click( async function() {
 
   
 // Add button pressed
-// Add button pressed
 $("#addButton").click(function() {
 
     // To make sure all the fields are filled
@@ -116,7 +120,8 @@ $("#addButton").click(function() {
             movie_rating: parseInt($("#movieRating").val())
         });
     } 
-  
+
+ 
 // Reset form
 $("#movieName").val('');
 $("#movieDirector").val('');
@@ -124,6 +129,17 @@ $("#movieRelease").val('');
 $("#movieRating").val('1');
 });
 
+  function toggleSort(field) {
+  const direction = (currentSortField === field && currentSortDirection === "asc") ? "desc" : "asc";
+  loadMovies(field, direction);
+}
+
+// Attach click events
+$("#movieName").click(() => toggleSort("movie_name"));
+$("#movieDirector").click(() => toggleSort("movie_director"));
+$("#movieRelease").click(() => toggleSort("movie_release"));
+$("#movieRating").click(() => toggleSort("movie_rating"));
+
 $('#mainTitle').html(snapshot.size + " Movie reviews in the list");
 });
- 
+} 
