@@ -7,7 +7,7 @@
 <!-- Required meta tags -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 
 <!-- Bootstrap CSS -->
@@ -25,6 +25,15 @@ rel="stylesheet">
 <div class="container">
 <h1 id="mainTitle">Movies</h1>
 <table class="table table-striped">
+<thead>
+<tr>
+<th id="sortName" style="cursor:pointer;">Movie Name<i class="fa fa-sort"></i></th>
+<th id="sortDirector" style="cursor:pointer;">Director<i class="fa fa-sort"></i></th>
+<th id="sortRelease" style="cursor:pointer;">Release Date<i class="fa fa-sort"></i></th>
+<th id="sortRating" style="cursor:pointer;">Rating<i class="fa fa-sort"></i></th>
+<th colspan="2">Actions</th>
+</tr> 
+</thead>
 <tbody id="reviewList">
 </tbody>
 </table>
