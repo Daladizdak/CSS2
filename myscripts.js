@@ -15,12 +15,12 @@ addDoc } from 'https://www.gstatic.com/firebasejs/11.4.0/firebase-firestore.js'
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyA065c8czE8dwdjZmer-pfN104xMAkfrr8",
-  authDomain: "assignment-4a14e.firebaseapp.com",
-  projectId: "assignment-4a14e",
-  storageBucket: "assignment-4a14e.firebasestorage.app",
-  messagingSenderId: "346473966556",
-  appId: "1:346473966556:web:33d5ade95f8e1325ab7d19"
+  apiKey: "AIzaSyDzDHpsWpGbIxXc6boCFiXJa6ZTAiRIlcI",
+  authDomain: "amir5cs022.firebaseapp.com",
+  projectId: "amir5cs022",
+  storageBucket: "amir5cs022.firebasestorage.app",
+  messagingSenderId: "762490470175",
+  appId: "1:762490470175:web:b793b64be078c531be3a2a"
 };
 
 // Initialize Firebase
