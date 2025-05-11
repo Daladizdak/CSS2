@@ -125,10 +125,10 @@ function toggleSort(field) {
 }
 
 // Attach click events
-$("#movieName").click(() => toggleSort("movie_name"));
-$("#movieDirector").click(() => toggleSort("movie_director"));
-$("#movieRelease").click(() => toggleSort("movie_release"));
-$("#movieRating").click(() => toggleSort("movie_rating"));
+$("#sortName").click(() => toggleSort("movie_name"));
+$("#sortDirector").click(() => toggleSort("movie_director"));
+$("#sortRelease").click(() => toggleSort("movie_release"));
+$("#sortRating").click(() => toggleSort("movie_rating"));
 
 // Initial load
 loadMovies();
