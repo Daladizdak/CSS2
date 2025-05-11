@@ -102,6 +102,12 @@ $(document).on("click", ".editBtn", function() {
     const updatedDirector = $("#editedDirector").val().trim();
     const updatedDate = $("#editedRelease").val().trim();
     const updatedRating = parseInt($("#editedRating").val());
+    
+// Makes sure all the fields are filled before submiting
+      if (!updatedName || !updatedDirector || !updatedDate || isNaN(updatedRating)) {
+      alert("Please fill out all fields before saving changes.");
+      return; 
+    }
 
     await updateDoc(doc(db, "Movies", docId), {
       movie_name: updatedName,
